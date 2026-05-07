@@ -31,17 +31,17 @@ async def monitor(data: dict):
     if not brand:
         return {"error": "品牌名不能为空"}
 
-    prompt = f"""请分析品牌「{brand}」在各大中文内容平台（如微博、小红书、豆瓣、知乎、百度等）上的提及热度。
+    prompt = f"""请分析品牌「{brand}」在各大中文内容平台（如DeepSeek、豆包、Kimi、文心一言等）上的提及热度。
 仅返回一个严格的 JSON 对象，格式如下，不要包含其他文字：
 {{
   "brand": "{brand}",
   "status": "热门" | "正常" | "冷淡",
   "platforms": {{
-    "微博": true/false,
-    "小红书": true/false,
-    "豆瓣": true/false,
-    "知乎": true/false,
-    "百度": true/false
+    "DeepSeek": true/false,
+    "豆包": true/false,
+    "Kimi": true/false,
+    "文心一言": true/false
+    
   }},
   "summary": "一句话总结"
 }}
